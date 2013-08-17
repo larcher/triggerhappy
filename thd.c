@@ -105,8 +105,8 @@ static int read_event( device *dev ) {
 		fprintf(stderr, "Error reading device '%s'\n", dev->devname);
 		return 1;
 	}
-	/* ignore all events except KEY and SW */
-	if (ev.type == EV_KEY || ev.type == EV_SW) {
+	/* ignore all events except KEY and SW and ABS */
+	if (ev.type == EV_KEY || ev.type == EV_SW || ev.type == EV_ABS) {
 		if (ev.type == EV_KEY && is_ignored( ev.code, ignored_keys)) {
 			return 0;
 		}

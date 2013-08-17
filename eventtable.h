@@ -20,3 +20,7 @@ static const char *KEY_NAME[KEY_MAX] = {
 static const char *SW_NAME[SW_MAX] = {
 #include "evtable_SW.h"
 };
+
+static const char *ABS_NAME[ABS_MAX] = {
+#include "evtable_ABS.h"
+};
